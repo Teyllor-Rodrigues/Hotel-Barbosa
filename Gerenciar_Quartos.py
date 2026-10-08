@@ -1,23 +1,17 @@
-from conectar_banco import conectar
+from Conectar_banco import conectar
 
 
 def listar_Ids_Quartos():
     conexao = conectar()
     cursor = conexao.cursor()
-
     quartos = "Select id_numero from Quartos"
-
     cursor.execute(quartos)
-
     quartos = cursor.fetchall()
-
     lista_ids = [quarto[0] for quarto in quartos]
-
     cursor.close()
     conexao.close()
 
     return lista_ids
-
 
 def Inserir_Quartos():
     lista_quartos = listar_Ids_Quartos()       
@@ -55,8 +49,6 @@ def Inserir_Quartos():
 
     cursor.close()
     conexao.close()
-
-
 
 def remover_quarto():
     lista_quartos = listar_Ids_Quartos()       

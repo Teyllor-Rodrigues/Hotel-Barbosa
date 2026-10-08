@@ -1,5 +1,5 @@
 import mysql.connector
-from conectar_banco import conectar
+from Conectar_banco import conectar
 
 conexao = conectar()
 cursor = conexao.cursor()

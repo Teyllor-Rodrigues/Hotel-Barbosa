@@ -1,12 +1,11 @@
 import mysql.connector
 
-
 def conectar():
     try : 
         conexao = mysql.connector.connect(
             host="localhost",
             user="root",
-            password= "T.iceb@0714",
+            password= "root",
             database="Hotel_Barbosa"
         )
 
